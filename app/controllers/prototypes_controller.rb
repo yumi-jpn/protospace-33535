@@ -1,6 +1,6 @@
 class PrototypesController < ApplicationController
   before_action :redirect_new_user_session, only:[:new, :edit, :destroy]
-  before_action  :move_to_edit, only:[:new, :edit, :destroy, :update]
+  before_action  :move_to_edit, only:[:edit, :destroy, :update]
 
   def index
     @prototypes = Prototype.all
